@@ -40,7 +40,7 @@
                 <div class="row" style="display:flex;justify-content:space-around;flex-wrap:wrap">
 
                         <div class="card">
-                        <img src="{{asset($post->image)}}" class="card-img-top" style="width:300px;height:300px;display:block;margin:2rem auto 0 auto" alt="{{$post->title}}" draggable="false">
+                        <img src="{{$post->getImageAttribute($post->image)}}" class="card-img-top" style="width:300px;height:300px;display:block;margin:2rem auto 0 auto" alt="{{$post->title}}" draggable="false">
                         <div class="card-body" style="padding-bottom:1rem">
                             <h4 class="card-title" style="padding:0 10px;margin-bottom:0"><a href="{{route('post.view', ['id' => $post->id])}}">{{$post->title}}</a></h4>
                             <p class="card-text" style="padding:0 10px;margin-bottom:5px">{{$post->content}}</p>

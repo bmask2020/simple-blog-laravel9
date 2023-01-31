@@ -18,4 +18,18 @@ class Posts extends Model
         
     ];
 
+
+    public function getImageAttribute($value)
+{
+    if ($value) {
+
+        return asset($value);
+        
+    } else {
+        return asset('posts/no-image.jpg');
+    }
+}
+
+
+
 }

@@ -36,7 +36,7 @@
                             @php($post_date = date('d-m-Y', strtotime($post->created_at)))
                         <th scope="row">{{$i++}}</th>
                         <td>{{$post->title}}</td>
-                        <td><img src="{{asset($post->image)}}" alt="" width="70" height="70"></td>
+                        <td><img src="{{$post->getImageAttribute($post->image)}}" alt="" width="70" height="70"></td>
                         <td>{{$post_date}}</td>
                         <td><a href="{{route('post.edit', ['id' => $post->id])}}" class="btn btn-warning">Edit</a></td>
                         <td><a href="{{route('post.soft.delete', ['id' => $post->id])}}" class="btn btn-danger">Delete</a></td>

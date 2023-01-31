@@ -43,7 +43,7 @@
                         @foreach($posts as $post)
 
                         <div class="card" style="width: 18rem;background:#fff;box-shadow:1px 1px 5px">
-                        <img src="{{asset($post->image)}}" class="card-img-top" style="width:100%" alt="{{$post->title}}" draggable="false">
+                        <img src="{{$post->getImageAttribute($post->image)}}" class="card-img-top" style="width:100%" alt="{{$post->title}}" draggable="false">
                         <div class="card-body" style="padding-bottom:1rem">
                             <h4 class="card-title" style="margin-bottom:0"><a href="{{route('post.view', ['id' => $post->id])}}">{{$post->title}}</a></h4>
                             <p class="card-text" style="margin-bottom:5px">{{substr($post->content,0,120)}}</p>
